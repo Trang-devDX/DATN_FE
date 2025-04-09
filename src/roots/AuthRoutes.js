@@ -7,9 +7,9 @@ const AuthRoutes = () => {
     const location = useLocation();
 
     if (loading) return <FiLoader />;
-    return auth?.user?.role == 'ADMIN' ? (
+    return auth?.user?.role === 'ADMIN' ? (
         <Navigate to="/admin" state={{ from: location }} replace />
-    ) : auth?.user?.role == 'USER' ? (
+    ) : auth?.user?.role === 'USER' ? (
         <Navigate to="/" state={{ from: location }} replace />
     ) : (
         <Outlet />
