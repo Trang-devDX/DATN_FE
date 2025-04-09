@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from 'react';
-import { getUserFromToken } from '../Services/UserService';
+import { getUserFromToken } from '../services/UserService';
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
