@@ -5,9 +5,9 @@ import Home from "./pages/user/Home";
 import Cart from "./pages/user/Cart";
 import Login from "./pages/user/Login";
 import Register from "./pages/user/Register";
-// import ForgotPassword1 from "./pages/user/ForgotPassword1";
-// import ForgotPassword2 from "./pages/user/ForgotPassword2";
-// import ForgotPassword3 from "./pages/user/ForgotPassword3";
+import ForgotPassword1 from "./pages/user/ForgotPassword1";
+import ForgotPassword2 from "./pages/user/ForgotPassword2";
+import ForgotPassword3 from "./pages/user/ForgotPassword3";
 
 import AuthRoutes from "./roots/AuthRoutes";
 import PrivateRoutes from "./roots/PrivateRoutes";
@@ -29,11 +29,11 @@ function App() {
           <Route element={<AuthRoutes />}>
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
-            {/*
+            
             <Route path="forgotpassword1" element={<ForgotPassword1 />} />
             <Route path="forgotpassword2" element={<ForgotPassword2 />} />
             <Route path="forgotpassword3" element={<ForgotPassword3 />} />
-            */}
+           
           </Route>
         </Route>
 
