@@ -1,9 +1,9 @@
-import login from "../../services/AuthService";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { login } from "../../services/AuthService";
 import { getUserFromToken } from "../../services/UserService";
 import useCart from "../../hooks/useCart";
 import useAuth from "../../hooks/useAuth";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { Input} from "antd";
 export default function Login() {
     const {auth, setAuth} = useAuth();

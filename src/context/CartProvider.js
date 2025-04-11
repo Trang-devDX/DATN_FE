@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from 'react';
-import { getNumberOfCart, fetchCartOfUser } from '../Services/CartService';
+import { getNumberOfCart, fetchCartOfUser } from '../services/CartService';
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
@@ -19,10 +19,7 @@ export const CartProvider = ({ children }) => {
         setNumberOfCart(newCount);
     };
 
-    const 
-    
-    
-    fetchCart = async () => {
+    const fetchCart = async () => {
         if (localStorage.getItem('access_token')) {
             try {
                 const cartItems = await fetchCartOfUser();

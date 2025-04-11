@@ -27,7 +27,7 @@ function App() {
           <Route path="cart" element={<Cart />} />
 
           <Route element={<AuthRoutes />}>
-            <Route path="login" element={<Login />} />
+            <Route path="login" element={<Login />}></Route>
             <Route path="register" element={<Register />} />
             
             <Route path="forgotpassword1" element={<ForgotPassword1 />} />
