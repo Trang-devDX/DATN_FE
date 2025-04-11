@@ -19,7 +19,10 @@ export const CartProvider = ({ children }) => {
         setNumberOfCart(newCount);
     };
 
-    const fetchCart = async () => {
+    const 
+    
+    
+    fetchCart = async () => {
         if (localStorage.getItem('access_token')) {
             try {
                 const cartItems = await fetchCartOfUser();
