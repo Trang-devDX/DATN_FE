@@ -23,7 +23,7 @@ function App() {
       <Routes>
         {/* Routes dành cho user */}
         <Route path="/" element={<UserLayout />}>
-          <Route path="home" element={<Home />} />
+          <Route index element={<Home />} />
           <Route path="cart" element={<Cart />} />
 
           <Route element={<AuthRoutes />}>

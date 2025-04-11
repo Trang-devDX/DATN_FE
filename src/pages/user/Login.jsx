@@ -34,8 +34,8 @@ export default function Login() {
                     navigate('/admin');
                 }else{
                     navigate('/userprofile');
-                    // fetchCart();
-                    // fetchNumberOfCart();
+                    fetchCart();
+                    fetchNumberOfCart();
                 }
             }
         } catch (error) {
@@ -46,6 +46,7 @@ export default function Login() {
         <div className="max-w-[1200px] mx-auto">
             <Input placeholder="Username" value={userName} onChange={e => setUsername(e.target.value)} />
             <Input.Password placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
+            <button onClick={handleLogin}>Đăng nhập</button>
         </div>
     )
 }
