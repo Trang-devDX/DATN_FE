@@ -8,6 +8,9 @@ import Register from "./pages/user/Register";
 import ForgotPassword1 from "./pages/user/ForgotPassword1";
 import ForgotPassword2 from "./pages/user/ForgotPassword2";
 import ForgotPassword3 from "./pages/user/ForgotPassword3";
+import Guide from "./pages/user/Guide";
+import Presentation from "./pages/user/Presentation";
+import Contact from "./pages/user/Contact";
 
 import AuthRoutes from "./roots/AuthRoutes";
 import PrivateRoutes from "./roots/PrivateRoutes";
@@ -25,6 +28,9 @@ function App() {
         <Route path="/" element={<UserLayout />}>
           <Route index element={<Home />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="guidepage" element={<Guide />} />
+          <Route path="presentation" element={<Presentation />} />
+          <Route path="contact" element={<Contact />} />
 
           <Route element={<AuthRoutes />}>
             <Route path="login" element={<Login />}></Route>

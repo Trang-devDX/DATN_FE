@@ -34,8 +34,8 @@ export default function Login() {
                     navigate('/admin');
                 }else{
                     navigate('/userprofile');
-                    fetchCart();
-                    fetchNumberOfCart();
+                    // fetchCart();
+                    // fetchNumberOfCart();
                 }
             }
         } catch (error) {
