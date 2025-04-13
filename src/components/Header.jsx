@@ -23,6 +23,10 @@ export default function Header() {
     const toggleUser = () => {
         setIsUserVisible(!isUserVisible);
     }
+    const handleOverlayClick = () => {
+        setIsCartVisible(false);
+        setIsUserVisible(false);
+    }
     
 
     return (
@@ -50,16 +54,22 @@ export default function Header() {
                         </div>
                     )}
                     {isCartVisible && (
-                        <div className="absolute top-full right-0 mt-2 w-[250px] bg-white shadow-lg rounded-xl p-4 z-50">
-                            <div className="text-sm">🛒 Giỏ hàng của bạn đang trống.</div>
+                        <div className="">
+                            <div className="cart-overlay fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 z-10" onClick={handleOverlayClick} />
+                            <div className="absolute top-full right-0 mt-2 w-[250px] bg-white shadow-lg rounded-xl p-4 z-50">
+                                <div className="text-sm">🛒 Giỏ hàng của bạn đang trống.</div>
+                            </div>
                         </div>
                     )}
                 </div>
                 <div className="relative">
                     <UserOutlined className="text-2xl" onClick={toggleUser}/>
                     {isUserVisible && (
-                        <div className="absolute top-full right-0 mt-2 w-[250px] bg-white shadow-lg rounded-xl p-4 z-50">
-                            <div className="text-sm">User</div>
+                        <div className="">
+                            <div className="cart-overlay fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 z-10" onClick={handleOverlayClick} />
+                            <div className="absolute top-full right-0 mt-2 w-[250px] bg-white shadow-lg rounded-xl p-4 z-50">
+                                <div className="text-sm">User</div>
+                            </div>
                         </div>
                     )}
                 </div>
