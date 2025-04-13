@@ -11,10 +11,10 @@ export default function Home() {
     return (
 
         <div>
-            <button onClick={toLoginPage}>toi trang dang nhap</button>
-            {/* <Intro></Intro> */}
-            {/* <Slider></Slider> */}
-            {/* <ListProduct></ListProduct> */}
+            {/* <button onClick={toLoginPage}>toi trang dang nhap</button> */}
+            <Intro></Intro>
+            {/* <Slider></Slider>
+            <ListProduct></ListProduct> */}
         </div>
     );
 }
