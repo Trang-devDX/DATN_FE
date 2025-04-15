@@ -10,6 +10,7 @@ import {
 } from "@ant-design/icons";
 import useCart from "../hooks/useCart";
 import useAuth from "../hooks/useAuth";
+import { formatCurrency } from "../utils/FormatCurrency";
 
 export default function Header() {
     const { numberOfCart, carts, updateNumberOfCart, setCarts } = useCart();
@@ -19,6 +20,11 @@ export default function Header() {
 
     const [isCartVisible, setIsCartVisible] = useState(false);
     const [isUserVisible, setIsUserVisible] = useState(false);
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        setProducts(carts);
+    }, [carts])
 
     const toggleCart = () => {
         setIsCartVisible(!isCartVisible);
@@ -53,7 +59,16 @@ export default function Header() {
         setCarts([]);
         navigate("/");
     }
-
+    const handleCartRedirect = () => {
+        navigate("/cart");
+        setIsCartVisible(false);
+        setIsUserVisible(false);
+    }
+    const handleOrderRedirect = () => {
+        navigate("/order");
+        setIsCartVisible(false);
+        setIsUserVisible(false);
+    }
 
     return (
         <div className="w-[80%] mx-auto flex flex-wrap">
@@ -85,10 +100,46 @@ export default function Header() {
                             {
                                 auth.user ? (
                                     <div className="absolute top-full right-0 mt-2 w-[350px] bg-white shadow-lg rounded-xl p-4 z-50">
-                                        <div className="max-h-[250px] text-lg text-center mb-5">🛒 Giỏ hàng.</div>
+                                        <div className="text-lg text-center mb-2">🛒 Giỏ hàng.</div>
+                                        <div className="max-h-[250px] overflow-y-auto scroll-hidden text-sm text-left mb-5">
+                                            {
+                                                products.length > 0 ? (
+                                                    <div className="gap-4">
+                                                        {
+                                                            products.map((product, index) => (
+                                                                <div key={product.id_cart} className="flex items-center mb-2">
+                                                                    <div className="w-[75px] h-[55px]">
+                                                                        <img
+                                                                            src={product.image}
+                                                                            alt={product.product_name}
+                                                                            className="object-cover w-full h-full"
+                                                                        />
+                                                                    </div>
+                                                                    <div className="ml-[10px] flex justify-between w-full">
+                                                                        <div className="mr-[10px]">
+                                                                            <p className="font-medium">
+                                                                                {product.product_name}
+                                                                            </p>
+                                                                            <p>x{product.quantity}</p>
+                                                                        </div>
+                                                                        <div className="mr-[10px] text-red-500">
+                                                                            {formatCurrency(
+                                                                                product.quantity * product.unit_price,
+                                                                            )}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            ))
+                                                        }
+                                                    </div>
+                                                ) : (
+                                                    <div className="">Hiện chưa có sản phẩm nào trong giỏ hàng</div>
+                                                )
+                                            }
+                                        </div>
                                         <div className="grid grid-cols-2 gap-4 text-lg text-center">
-                                            <button className="w-[150px] h-[50px] text-base bg-green-500 rounded border-white border">Chỉnh sửa giỏ hàng</button>
-                                            <button className="w-[150px] h-[50px] text-base bg-white rounded border-green-500 border">Thanh toán</button>
+                                            <button className="w-[150px] h-[50px] text-base bg-green-500 rounded border-white border" onClick={handleCartRedirect}>Chỉnh sửa giỏ hàng</button>
+                                            <button className="w-[150px] h-[50px] text-base bg-white rounded border-green-500 border" onClick={handleOrderRedirect}>Thanh toán</button>
                                         </div>
                                     </div>
                                 ) : (
@@ -109,32 +160,30 @@ export default function Header() {
                     <UserOutlined className="text-2xl" onClick={toggleUser} />
                     {isUserVisible && (
                         <div className="">
-                        <div className="cart-overlay fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 z-10" onClick={handleOverlayClick} />
-                        {
-                            auth.user ? (
-                                <div className="absolute top-full right-0 mt-2 w-[200px] bg-white shadow-lg rounded-xl p-4 z-50 grid grid-row-2 gap-4 text-lg text-center text-base">                                   
-                                    <div className="flex cursor-pointer" onClick={handleUserProfileRedirect}>
-                                        <ProfileOutlined className="text-2xl mr-5" />
-                                        <p>Hồ sơ cá nhân</p>
+                            <div className="cart-overlay fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 z-10" onClick={handleOverlayClick} />
+                            {
+                                auth.user ? (
+                                    <div className="absolute top-full right-0 mt-2 w-[200px] bg-white shadow-lg rounded-xl p-4 z-50 grid grid-row-2 gap-4 text-lg text-center text-base">
+                                        <div className="flex cursor-pointer" onClick={handleUserProfileRedirect}>
+                                            <ProfileOutlined className="text-2xl mr-5" />
+                                            <p>Hồ sơ cá nhân</p>
+                                        </div>
+                                        <div className="flex cursor-pointer" onClick={handleLogout}>
+                                            <LogoutOutlined className="text-2xl mr-5" />
+                                            <p>Đăng xuất</p>
+                                        </div>
                                     </div>
-                                    <div className="flex cursor-pointer" onClick={handleLogout}>
-                                        <LogoutOutlined className="text-2xl mr-5" />
-                                        <p>Đăng xuất</p>
+                                ) : (
+                                    <div className="absolute top-full right-0 mt-2 w-[350px] bg-white shadow-lg rounded-xl p-4 z-50">
+                                        <div className="grid grid-cols-2 gap-4 text-lg text-center">
+                                            <button className="w-[150px] h-[50px] text-base bg-green-500 rounded border-white border" onClick={handleLoginRedirect}>Đăng nhập</button>
+                                            <button className="w-[150px] h-[50px] text-base bg-white rounded border-green-500 border" onClick={handleRegisterRedirect}>Đăng kí</button>
+                                        </div>
                                     </div>
-                                    {/* LogoutOutlined */}
-                                    {/* <div className="   ">Đăng xuất</div>                                  */}
-                                </div>
-                            ) : (
-                                <div className="absolute top-full right-0 mt-2 w-[350px] bg-white shadow-lg rounded-xl p-4 z-50">
-                                    <div className="grid grid-cols-2 gap-4 text-lg text-center">
-                                        <button className="w-[150px] h-[50px] text-base bg-green-500 rounded border-white border" onClick={handleLoginRedirect}>Đăng nhập</button>
-                                        <button className="w-[150px] h-[50px] text-base bg-white rounded border-green-500 border" onClick={handleRegisterRedirect}>Đăng kí</button>
-                                    </div>
-                                </div>
-                            )
-                        }
+                                )
+                            }
 
-                    </div>
+                        </div>
                     )}
                 </div>
             </div>

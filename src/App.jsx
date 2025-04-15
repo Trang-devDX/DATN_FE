@@ -3,6 +3,8 @@ import UserLayout from "./layouts/UserLayout";
 
 import Home from "./pages/user/Home";
 import Cart from "./pages/user/Cart";
+import Order from "./pages/user/Order";
+import UserProfile from "./pages/user/UserProfile";
 import Login from "./pages/user/Login";
 import Register from "./pages/user/Register";
 import ForgotPassword1 from "./pages/user/ForgotPassword1";
@@ -28,6 +30,8 @@ function App() {
         <Route path="/" element={<UserLayout />}>
           <Route index element={<Home />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="order" element={<Order />} />
+          <Route path="userprofile" element={<UserProfile />} />
           <Route path="guidepage" element={<Guide />} />
           <Route path="presentation" element={<Presentation />} />
           <Route path="contact" element={<Contact />} />
