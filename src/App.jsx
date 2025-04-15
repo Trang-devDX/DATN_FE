@@ -37,7 +37,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
 
           <Route element={<AuthRoutes />}>
-            <Route path="login" element={<Login />}></Route>
+            <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             
             <Route path="forgotpassword1" element={<ForgotPassword1 />} />

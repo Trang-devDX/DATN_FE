@@ -10,7 +10,7 @@ const UserLayout = () => {
         <Header />
         <Navigation></Navigation>
       </div>
-      <main className="mt-[120px]"><Outlet /></main>
+      <main className="mt-[145px]"><Outlet /></main>
       <Footer />
     </>
   );

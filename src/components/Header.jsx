@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import {
     SearchOutlined,
@@ -138,16 +138,16 @@ export default function Header() {
                                             }
                                         </div>
                                         <div className="grid grid-cols-2 gap-4 text-lg text-center">
-                                            <button className="w-[150px] h-[50px] text-base bg-green-500 rounded border-white border" onClick={handleCartRedirect}>Chỉnh sửa giỏ hàng</button>
-                                            <button className="w-[150px] h-[50px] text-base bg-white rounded border-green-500 border" onClick={handleOrderRedirect}>Thanh toán</button>
+                                            <button className="w-[150px] h-[50px] text-base bg-green-500 rounded border-white border hover:opacity-[0.9]" onClick={handleCartRedirect}>Chỉnh sửa giỏ hàng</button>
+                                            <button className="w-[150px] h-[50px] text-base bg-white rounded border-green-500 border hover:opacity-[0.9]" onClick={handleOrderRedirect}>Thanh toán</button>
                                         </div>
                                     </div>
                                 ) : (
                                     <div className="absolute top-full right-0 mt-2 w-[350px] bg-white shadow-lg rounded-xl p-4 z-50">
                                         <div className="max-h-[250px] text-lg text-center mb-5">Vui lòng đăng nhập để xem giỏ hàng.</div>
                                         <div className="grid grid-cols-2 gap-4 text-lg text-center">
-                                            <button className="w-[150px] h-[50px] text-base bg-green-500 rounded border-white border" onClick={handleLoginRedirect}>Đăng nhập</button>
-                                            <button className="w-[150px] h-[50px] text-base bg-white rounded border-green-500 border" onClick={handleRegisterRedirect}>Đăng kí</button>
+                                            <button className="w-[150px] h-[50px] text-base bg-green-500 rounded border-white border hover:opacity-[0.9]" onClick={handleLoginRedirect}>Đăng nhập</button>
+                                            <button className="w-[150px] h-[50px] text-base bg-white rounded border-green-500 border hover:opacity-[0.9]" onClick={handleRegisterRedirect}>Đăng kí</button>
                                         </div>
                                     </div>
                                 )
@@ -176,8 +176,8 @@ export default function Header() {
                                 ) : (
                                     <div className="absolute top-full right-0 mt-2 w-[350px] bg-white shadow-lg rounded-xl p-4 z-50">
                                         <div className="grid grid-cols-2 gap-4 text-lg text-center">
-                                            <button className="w-[150px] h-[50px] text-base bg-green-500 rounded border-white border" onClick={handleLoginRedirect}>Đăng nhập</button>
-                                            <button className="w-[150px] h-[50px] text-base bg-white rounded border-green-500 border" onClick={handleRegisterRedirect}>Đăng kí</button>
+                                            <button className="w-[150px] h-[50px] text-base bg-green-500 rounded border-white border hover:opacity-[0.9]" onClick={handleLoginRedirect}>Đăng nhập</button>
+                                            <button className="w-[150px] h-[50px] text-base bg-white rounded border-green-500 border hover:opacity-[0.9]" onClick={handleRegisterRedirect}>Đăng kí</button>
                                         </div>
                                     </div>
                                 )
