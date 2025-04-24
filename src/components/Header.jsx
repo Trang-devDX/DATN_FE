@@ -84,7 +84,7 @@ export default function Header() {
                 />
             </div>
             <div className="w-[20%] flex justify-center items-center">
-                <p>Hotline: 0123456789 | 0987654321</p>
+                <p>Hotline: 012345678 | 0987654321</p>
             </div>
             <div className="w-[15%] flex items-center justify-end gap-5">
                 <div className="relative">

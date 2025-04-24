@@ -6,11 +6,11 @@ import Navigation from "../components/Navigation";
 const UserLayout = () => {
   return (
     <>
-      <div className="fixed top-0 right-0 left-0 z-10 bg-white">
+      <div className="fixed top-0 right-0 left-0 z-10 bg-white max-h-[125px]">
         <Header />
         <Navigation></Navigation>
       </div>
-      <main className="mt-[145px]"><Outlet /></main>
+      <main className="mt-[125px]"><Outlet /></main>
       <Footer />
     </>
   );
