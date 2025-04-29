@@ -26,7 +26,7 @@ export const getAllPaymentMethod = async (voucher, total) => {
                 ...getHeader(),
             },
         });
-        return response.result; 
+        return response.result; // Trả về response.data.result
     } catch (error) {
         console.error('Lỗi khi check voucher:', error);
         throw error;
@@ -46,7 +46,7 @@ export const callCreateOrder = async (data) => {
                 ...getHeader(),
             },
         });
-        return response.result;
+        return response.result; // Trả về response.data.result
     } catch (error) {
         console.error('Lỗi khi tạo đơn hàng:', error);
         throw error;

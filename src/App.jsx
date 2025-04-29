@@ -29,21 +29,22 @@ function App() {
         {/* Routes dành cho user */}
         <Route path="/" element={<UserLayout />}>
           <Route index element={<Home />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="order" element={<Order />} />
-          <Route path="userprofile" element={<UserProfile />} />
           <Route path="guidepage" element={<Guide />} />
           <Route path="presentation" element={<Presentation />} />
           <Route path="contact" element={<Contact />} />
 
           <Route element={<AuthRoutes />}>
             <Route path="login" element={<Login />} />
-            <Route path="register" element={<Register />} />
-            
+            <Route path="register" element={<Register />} />            
             <Route path="forgotpassword1" element={<ForgotPassword1 />} />
             <Route path="forgotpassword2" element={<ForgotPassword2 />} />
-            <Route path="forgotpassword3" element={<ForgotPassword3 />} />
-           
+            <Route path="forgotpassword3" element={<ForgotPassword3 />} />           
+          </Route>
+
+          <Route element={<PrivateRoutes allowedRoles={[roles.user, roles.admin]} />}>
+            <Route path="userprofile" element={<UserProfile />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="order" element={<Order />} />
           </Route>
         </Route>
 
