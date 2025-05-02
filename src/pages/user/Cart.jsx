@@ -1,5 +1,10 @@
-export default function Cart() {
+import Cart from '../../components/Cart/Cart'
+function CartPage() {
     return(
-        <div>Cart Page</div>
+        <>
+            <Cart/>
+        </>
     )
 }
+
+export default CartPage;

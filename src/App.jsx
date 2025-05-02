@@ -13,6 +13,8 @@ import ForgotPassword3 from "./pages/user/ForgotPassword3";
 import Guide from "./pages/user/Guide";
 import Presentation from "./pages/user/Presentation";
 import Contact from "./pages/user/Contact";
+import CompleteOrder from "./components/CompleteOrder";
+import ErrorOrder from "./components/ErrorOrder";
 
 import AuthRoutes from "./roots/AuthRoutes";
 import PrivateRoutes from "./roots/PrivateRoutes";
@@ -47,6 +49,8 @@ function App() {
             <Route path="order" element={<Order />} />
           </Route>
         </Route>
+        <Route path="CompleteOrder" element={<CompleteOrder />}></Route>
+        <Route path="ErrorOrder" element={<ErrorOrder />}></Route>
 
         {/* Routes dành cho admin */}
         <Route element={<PrivateRoutes allowedRoles={[roles.admin]} />} />

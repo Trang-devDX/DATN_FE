@@ -1,5 +1,6 @@
-export default function Order() {
+import Order from '../../components/Order/Order.jsx'
+export default function OrderPage() {
     return(
-        <div>Order Page</div>
+        <Order/>
     )
 }
