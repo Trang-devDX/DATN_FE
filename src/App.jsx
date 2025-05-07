@@ -15,6 +15,7 @@ import Presentation from "./pages/user/Presentation";
 import Contact from "./pages/user/Contact";
 import CompleteOrder from "./components/CompleteOrder";
 import ErrorOrder from "./components/ErrorOrder";
+import Product from './pages/user/Product'
 
 import AuthRoutes from "./roots/AuthRoutes";
 import PrivateRoutes from "./roots/PrivateRoutes";
@@ -31,6 +32,7 @@ function App() {
         {/* Routes dành cho user */}
         <Route path="/" element={<UserLayout />}>
           <Route index element={<Home />} />
+          <Route path="product/:categoryId" element={<Product />} />
           <Route path="guidepage" element={<Guide />} />
           <Route path="presentation" element={<Presentation />} />
           <Route path="contact" element={<Contact />} />
