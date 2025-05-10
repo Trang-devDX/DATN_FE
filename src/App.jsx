@@ -16,6 +16,7 @@ import Contact from "./pages/user/Contact";
 import CompleteOrder from "./components/CompleteOrder";
 import ErrorOrder from "./components/ErrorOrder";
 import Product from './pages/user/Product'
+import Review from './pages/user/ReviewPage'
 
 import AuthRoutes from "./roots/AuthRoutes";
 import PrivateRoutes from "./roots/PrivateRoutes";
@@ -33,6 +34,7 @@ function App() {
         <Route path="/" element={<UserLayout />}>
           <Route index element={<Home />} />
           <Route path="product/:categoryId" element={<Product />} />
+          <Route path="review/:orderId" element={<Review />} />
           <Route path="guidepage" element={<Guide />} />
           <Route path="presentation" element={<Presentation />} />
           <Route path="contact" element={<Contact />} />
