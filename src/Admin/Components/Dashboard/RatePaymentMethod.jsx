@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Cell, Legend, Pie, PieChart, ResponsiveContainer } from 'recharts';
-import { fetchRatePaymentMethod } from '../../../Services/DashboardService';
+import { fetchRatePaymentMethod } from '../../../services/DashboardService1';
 
 function RatePaymentMethod() {
     const [data, setData] = useState([]);

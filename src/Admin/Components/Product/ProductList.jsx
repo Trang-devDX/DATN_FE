@@ -5,7 +5,7 @@ import { Pagination } from 'antd';
 import ProductTableHeader from './ProductTableHeader';
 import '../CustomCss/CustomPagination.css';
 import { fetchProductsFromAPI, fetchProductsByCategoryFromAPI, searchProductsFromAPI } from '../../../services/ProductService';
-import { fetchAllCategoriesFromAPI } from '../../../Services/CategoryService';
+import { fetchAllCategoriesFromAPI } from '../../../services/CategoryService1';
 import { formatCurrency } from '../../../utils/FormatCurrency';
 
 function ProductList() {

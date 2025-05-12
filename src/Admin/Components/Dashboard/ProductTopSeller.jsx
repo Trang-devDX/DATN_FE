@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { fetchProductsBestSeller } from '../../../Services/DashboardService';
+import { fetchProductsBestSeller } from '../../../services/DashboardService1';
 import { Link } from 'react-router-dom';
 import { formatCurrency } from '../../../utils/FormatCurrency';
 import classNames from 'classnames';

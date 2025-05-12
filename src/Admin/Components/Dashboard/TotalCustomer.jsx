@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaHouseChimneyUser } from 'react-icons/fa6';
-import { fetchTotalCustomer } from '../../../Services/DashboardService';
+import { fetchTotalCustomer } from '../../../services/DashboardService1';
 
 function TotalCustomer() {
     const [data, setData] = useState(0);

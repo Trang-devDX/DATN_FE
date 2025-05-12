@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchProductsTopRating } from '../../../Services/DashboardService';
+import { fetchProductsTopRating } from '../../../services/DashboardService1';
 import { StarFilled, StarOutlined } from '@ant-design/icons';
 import Rating from 'react-rating';
 

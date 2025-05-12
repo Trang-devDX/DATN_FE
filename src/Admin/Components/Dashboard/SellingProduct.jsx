@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { LiaSellcast } from 'react-icons/lia';
-import { fetchQuantityProductActive } from '../../../Services/DashboardService';
+import { fetchQuantityProductActive } from '../../../services/DashboardService1';
 
 function SellingProduct() {
     const [products, setProduct] = useState(0);

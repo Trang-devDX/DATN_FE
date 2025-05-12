@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaCalendarCheck } from 'react-icons/fa6';
-import { fetchTotalOrder } from '../../../Services/DashboardService';
+import { fetchTotalOrder } from '../../../services/DashboardService1';
 
 function TotalOrder() {
     const [data, setData] = useState(0);

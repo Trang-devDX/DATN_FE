@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { MdOutlineStopScreenShare } from 'react-icons/md';
-import { fetchQuantityProductInActive } from '../../../Services/DashboardService';
+import { fetchQuantityProductInActive } from '../../../services/DashboardService1';
 
 function StopSellingProduct() {
   const [products, setProduct] = useState(0);

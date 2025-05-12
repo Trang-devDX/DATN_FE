@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import { fetchRevenueLastSevenDays } from '../../../Services/DashboardService';
+import { fetchRevenueLastSevenDays } from '../../../services/DashboardService1';
 
 function WeeklyRevenue() {
     const [weeklyRevenue, setWeeklyRevenue] = useState([]);

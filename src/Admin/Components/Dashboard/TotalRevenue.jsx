@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaWallet } from 'react-icons/fa6';
 import { formatCurrency } from '../../../utils/FormatCurrency';
-import { fetchTotalRevenue } from '../../../Services/DashboardService';
+import { fetchTotalRevenue } from '../../../services/DashboardService1';
 
 function TotalRevenue() {
     const [totalRevenue, setTotalRevenue] = useState(1);

@@ -12,7 +12,7 @@ import {
 import { Editor } from '@tinymce/tinymce-react';
 import { notification, Select } from 'antd';
 import { FiLoader } from 'react-icons/fi';
-import { fetchAllCategoriesFromAPI } from '../../../Services/CategoryService';
+import { fetchAllCategoriesFromAPI } from '../../../services/CategoryService1';
 import { isValidImageType } from '../../../utils/IsValidImageType';
 import CustomModal from '../../../utils/CustomModal';
 

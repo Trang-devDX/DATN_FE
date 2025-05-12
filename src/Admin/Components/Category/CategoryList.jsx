@@ -10,7 +10,7 @@ import {
     fetchCategoryByIdFromAPI,
     searchCategoriesFromAPI,
     updateCategoryToAPI,
-} from '../../../Services/CategoryService';
+} from '../../../services/CategoryService1';
 import { FaTrashAlt } from 'react-icons/fa';
 import { FiLoader } from 'react-icons/fi';
 import { isValidImageType } from '../../../utils/IsValidImageType';

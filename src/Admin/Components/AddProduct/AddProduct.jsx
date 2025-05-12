@@ -4,7 +4,7 @@ import { addProductToAPI } from '../../../services/ProductService';
 import { notification, Select } from 'antd';
 import { FiLoader } from 'react-icons/fi';
 import '../CustomCss/CustomSelect.css';
-import { fetchAllCategoriesFromAPI } from '../../../Services/CategoryService';
+import { fetchAllCategoriesFromAPI } from '../../../services/CategoryService1';
 import { isValidImageType } from '../../../utils/IsValidImageType';
 
 const AddProduct = () => {

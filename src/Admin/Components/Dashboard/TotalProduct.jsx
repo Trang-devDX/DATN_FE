@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { AiOutlineProduct } from 'react-icons/ai';
-import { fetchTotalProduct } from '../../../Services/DashboardService';
+import { fetchTotalProduct } from '../../../services/DashboardService1';
 
 function TotalProduct() {
     const [products, setProduct] = useState(0);

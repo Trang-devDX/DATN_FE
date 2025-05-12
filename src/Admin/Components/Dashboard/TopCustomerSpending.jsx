@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { fetchTopCustomerBySpending } from '../../../Services/DashboardService';
+import { fetchTopCustomerBySpending } from '../../../services/DashboardService1';
 import { formatCurrency } from '../../../utils/FormatCurrency';
 import { formatPhoneNumber } from '../../../utils/FormatPhoneNumber';
 

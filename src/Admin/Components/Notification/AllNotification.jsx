@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { fetchAllNotification, updateNotification } from '../../../Services/NotificationService';
+import { fetchAllNotification, updateNotification } from '../../../services/NotificationService1';
 import { Link } from 'react-router-dom';
 
 function AllNotification() {

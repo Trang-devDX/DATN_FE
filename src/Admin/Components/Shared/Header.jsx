@@ -6,7 +6,7 @@ import { IoIosSearch } from 'react-icons/io';
 import { RiLogoutBoxRLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-import { fetchAllNotification, updateNotification } from '../../../Services/NotificationService';
+import { fetchAllNotification, updateNotification } from '../../../services/NotificationService1';
 import { DASHBOARD_SIDEBAR_LINKS } from '../../Lib/Const/Navigation';
 
 function Header() {

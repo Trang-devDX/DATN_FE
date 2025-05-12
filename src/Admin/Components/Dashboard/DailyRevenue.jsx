@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { MdAccountBalanceWallet } from 'react-icons/md';
 import { formatCurrency } from '../../../utils/FormatCurrency';
-import { fetchRevenueToday } from '../../../Services/DashboardService';
+import { fetchRevenueToday } from '../../../services/DashboardService1';
 
 function DailyRevenue() {
     const [todayRevenue, setTodayRevenue] = useState(1);

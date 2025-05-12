@@ -16,7 +16,7 @@ import {
 } from 'recharts';
 import { formatCurrency } from '../../../utils/FormatCurrency';
 import { BiWallet } from 'react-icons/bi';
-import { fetchRevenueOneYear } from '../../../Services/DashboardService';
+import { fetchRevenueOneYear } from '../../../services/DashboardService1';
 
 function AnnualRevenue() {
     const [currentY, setCurrentY] = useState(true);

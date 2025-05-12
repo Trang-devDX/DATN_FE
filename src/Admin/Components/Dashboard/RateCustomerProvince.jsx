@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ComposedChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { fetchRateCustomerByProvince } from '../../../Services/DashboardService';
+import { fetchRateCustomerByProvince } from '../../../services/DashboardService1';
 
 function RateCustomerProvince() {
 

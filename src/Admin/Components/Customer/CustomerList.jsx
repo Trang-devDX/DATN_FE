@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import CustomerTableHeader from './CustomerTableHeader';
 import { Link } from 'react-router-dom';
 import { Pagination } from 'antd';
-import { fetchUsersFromAPI, searchUsersFromAPI } from '../../../Services/UserService';
+import { fetchUsersFromAPI, searchUsersFromAPI } from '../../../services/UserService';
 import { formatCurrency } from '../../../utils/FormatCurrency';
 import { formatPhoneNumber } from '../../../utils/FormatPhoneNumber';
 

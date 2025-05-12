@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { Cell, Pie, PieChart } from 'recharts';
-import { fetchRateCustomerReturning, fetchTotalCustomer } from '../../../Services/DashboardService';
+import { fetchRateCustomerReturning, fetchTotalCustomer } from '../../../services/DashboardService1';
 
 function RateCustomerReturn() {
     const [dataRateCustomerReturning, setDataRateCustomerReturning] = useState(0);
