@@ -8,9 +8,8 @@ export default function Presentation() {
         <div className="justify-center items-centers py-4">
             <h2 className="text-center text-[42px] font-bold  ">VỀ CỬA HÀNG</h2>
             <p className="max-w-[700px] mt-2 mb-5 text-[18px] text-center mx-auto  ">
-                FoCoDo là hệ thống chuyên cung cấp các sản phẩm đặc sản đến từ Cố Đô Huế. Với phương châm "Gói trọn ẩm
-                thực Huế", chúng tôi luôn mang đến cho khách hàng những món ăn theo tiêu chuẩn truyền thống cung đình
-                Huế với giá thành hợp lí nhất. Hệ thống chúng tôi cung cấp:
+                QuangNamFood là hệ thống chuyên cung cấp các sản phẩm đặc sản đến từ Quảng Nam. Với phương châm "Gói trọn ẩm
+                thực Quảng Nam", chúng tôi luôn mang đến cho khách hàng những món ăn theo tiêu chuẩn cao với giá thành hợp lí nhất. Hệ thống chúng tôi cung cấp:
             </p>
             <div className="flex justify-center">
                 <div className="flex w-1/5 border mr-4 rounded-[10%] bg-[#B7B7B7] shadow-xl shadow-[#3B3030] hover:bg-[#664343] duration-500 ">
@@ -20,7 +19,7 @@ export default function Presentation() {
                         </span>
                         <div className="w-full h-0.5 bg-[#3B3030] mt-2 mb-4 group-hover:bg-white duration-500"></div>
                         <p className=" text-[#3B3030] text-[18px] text-center group-hover:text-white duration-500">
-                            FoCoDo cung cấp nhiều loại đặc sản đến từ Huế, giúp lựa chọn của bạn đa dạng hơn
+                            QuangNamFood cung cấp nhiều loại đặc sản đến từ Huế, giúp lựa chọn của bạn đa dạng hơn
                         </p>
                     </div>
                 </div>

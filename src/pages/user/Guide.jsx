@@ -4,7 +4,7 @@ export default function Guide() {
             <div className="w-[80%] mx-auto space-y-10 py-4">
                 <h1 className="text-2xl font-medium uppercase">Hướng dẫn thanh toán</h1>
                 <p className="italic">
-                    Bài viết được <span className="text-orange-500">FOCODO - Hệ thống cửa hàng ẩm thực</span> cố đó hàng
+                    Bài viết được <span className="text-orange-500">QuangNamFood - Hệ thống cửa hàng ẩm thực</span> Quảng Nam hàng
                     đầu Việt Nam với 3 chi nhánh trên toàn quốc chia sẻ.
                 </p>
                 <div className="space-y-5">
@@ -13,10 +13,10 @@ export default function Guide() {
                     </h1>
                     <p>
                         - Tất cả các chi nhánh của{' '}
-                        <span className="text-orange-500">hệ thống cửa hàng ẩm thực FOCODO</span> đều chấp thuận thanh
+                        <span className="text-orange-500">hệ thống cửa hàng ẩm thực QuangNamFood</span> đều chấp thuận thanh
                         toán bằng tiền mặt, chuyển khoản qua ngân hàng hoặc thanh toán qua thẻ tín dụng. Đối với thanh
-                        toán qua thẻ tín dụng (FOCODO chịu phí thẻ) ở bất cứ chi nhánh nào của hệ thống cửa hàng ẩm thực
-                        FOCODO.
+                        toán qua thẻ tín dụng (QuangNamFood chịu phí thẻ) ở bất cứ chi nhánh nào của hệ thống cửa hàng ẩm thực
+                        QuangNam-Food.
                     </p>
                     <p>
                         - Quý khách có thể đến trực tiếp chi nhánh hoặc liên hệ qua hotline chi nhánh để biết thêm chi
@@ -43,31 +43,31 @@ export default function Guide() {
                     </p>
                 </div>
                 <div className="space-y-5">
-                    <h1 className="text-xl font-medium">3. Thông tin thanh toán của các cửa hàng ẩm thực FOCODO</h1>
+                    <h1 className="text-xl font-medium">3. Thông tin thanh toán của các cửa hàng ẩm thực QuangNamFood</h1>
                     <div className="space-y-3">
-                        <h1 className="font-medium">* Chi nhánh Đà Nẵng - FOCODO Đà Nẵng</h1>
+                        <h1 className="font-medium">* Chi nhánh Đà Nẵng - QuangNamFood Đà Nẵng</h1>
                         <p>54 Nguyễn Lương Bằng, phường Hòa Khánh Bắc, quận Liên Chiểu, TP Đà Nẵng</p>
                         <p>
                             Thông tin thanh toán:{' '}
                             <span className="text-orange-500">
-                                VietComBank - STK:2203222222 - Chủ TK: FOCODO-DANANG
+                                VietComBank - STK:2203222222 - Chủ TK: QuangNamFood-DANANG
                             </span>
                         </p>
                     </div>
                     <div className="space-y-3">
-                        <h1 className="font-medium">* Chi nhánh Huế - FOCODO Huế</h1>
+                        <h1 className="font-medium">* Chi nhánh Huế - QuangNamFood Huế</h1>
                         <p>63 Phùng Hưng, Thuận Thành, Huế, Thừa Thiên Huế</p>
                         <p>
                             Thông tin thanh toán: VietComBank -{' '}
-                            <span className="text-orange-500">VietComBank - STK:2203222222 - Chủ TK: FOCODO-HUE</span>
+                            <span className="text-orange-500">VietComBank - STK:2203222222 - Chủ TK: QuangNamFood-Huế</span>
                         </p>
                     </div>
                     <div className="space-y-3">
-                        <h1 className="font-medium">* Chi nhánh TP Hồ Chí Minh - FOCODO TP Hồ Chí Minh</h1>
+                        <h1 className="font-medium">* Chi nhánh TP Hồ Chí Minh - QuangNamFood TP Hồ Chí Minh</h1>
                         <p>78 Quang Trung, Phước Long B, Quận 9, TP Hồ Chí Minh</p>
                         <p>
                             Thông tin thanh toán:{' '}
-                            <span className="text-orange-500">VietComBank - STK:2203222222 - Chủ TK: FOCODO-HCM</span>
+                            <span className="text-orange-500">VietComBank - STK:2203222222 - Chủ TK: QuangNamFood-HCM</span>
                         </p>
                     </div>
                 </div>
